@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, StyleSheet } from "react-native";
+import { View, Text, TextInput, StyleSheet } from "react-native";
+import CustomButton from "../components/CustomButton";
 import { useNavigation } from "@react-navigation/native";
 import { supabase } from "../lib/supabase";
 
@@ -53,12 +54,13 @@ export default function LoginScreen() {
         onSubmitEditing={login}
       />
 
-      <Button title="Iniciar sesión" onPress={login} />
+      <CustomButton title="Iniciar sesión" onPress={login} />
 
       <View style={{ marginTop: 10 }}>
-        <Button
+        <CustomButton
           title="Registrarse"
           onPress={() => navigation.navigate("Register")}
+          style={{ backgroundColor: "#6c757d" }}
         />
       </View>
 
