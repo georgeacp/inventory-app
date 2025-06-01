@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, Alert } from "react-native";
+import CustomButton from "../components/CustomButton";
 import { useForm, Controller } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -162,13 +163,13 @@ export default function RegisterScreen({ navigation }) {
         )}
       />
 
-      <Button title="Registrarse" onPress={handleSubmit(onSubmit)} />
+      <CustomButton title="Registrarse" onPress={handleSubmit(onSubmit)} />
 
       <View style={{ marginTop: 10 }}>
-        <Button
+        <CustomButton
           title="Volver a Login"
           onPress={() => navigation.navigate("Login")}
-          color="gray"
+          style={{ backgroundColor: "#6c757d" }}
         />
       </View>
 
