@@ -50,6 +50,7 @@ export default function LoginScreen() {
         onChangeText={setPassword}
         secureTextEntry
         style={styles.input}
+        onSubmitEditing={login}
       />
 
       <Button title="Iniciar sesión" onPress={login} />
